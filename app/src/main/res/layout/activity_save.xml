@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="34dp"
+    tools:context=".ui.SaveActivity">
+
+    <!-- back button layout -->
+    <LinearLayout
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- back button -->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+    <!-- title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semi_bold"
+        android:text="Saved"
+        android:textColor="@color/button_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButton" />
+
+    <!-- shadow for search bar -->
+    <com.blure.complexview.ComplexView
+        android:id="@+id/searchBarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:radius="15.28dp"
+        app:shadow="true"
+        app:shadowAlpha="50"
+        app:shadowColor="#000000"
+        app:shadowSpread="1">
+
+        <!-- round corners for search bar -->
+        <com.blure.complexview.ComplexView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:color="@color/white"
+            app:radius="15.28dp">
+
+            <!-- searchBar layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- search view -->
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:defaultQueryHint="Search"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintEnd_toStartOf="@id/filterButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@android:color/transparent"
+                    app:searchIcon="@drawable/search" />
+
+                <!-- filter button -->
+                <ImageButton
+                    android:id="@+id/filterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/filter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/light_gray" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.blure.complexview.ComplexView>
+
+    </com.blure.complexview.ComplexView>
+
+    <!-- sub title -->
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24sp"
+        android:fontFamily="@font/source_sans_pro_semi_bold"
+        android:text="Today"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchBarLayout" />
+
+    <!-- see all -->
+    <TextView
+        android:id="@+id/seeAllText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="12sp"
+        android:fontFamily="@font/source_sans_pro_semi_bold"
+        android:text="See all.."
+        android:textColor="@color/button_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/subTitleText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- shadow for recycler view -->
+    <com.blure.complexview.ComplexView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subTitleText"
+        app:radius="15.28dp"
+        app:shadow="true"
+        app:shadowAlpha="50"
+        app:shadowColor="#000000"
+        app:shadowSpread="1">
+
+        <!-- round corners for recycler view -->
+        <com.blure.complexview.ComplexView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:color="@color/white"
+            app:radius="15.28dp">
+
+            <!-- recycler view layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="18dp">
+
+                <!-- recycler view -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingTop="30dp"
+                    app:layout_constraintBottom_toTopOf="@id/downButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- down button -->
+                <ImageButton
+                    android:id="@+id/downButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.blure.complexview.ComplexView>
+
+    </com.blure.complexview.ComplexView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
