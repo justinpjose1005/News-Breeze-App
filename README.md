@@ -22,8 +22,7 @@ The `second screen` will display the full page article. Here you will also be ab
 
 The `final screen` will display all the saved articles. And you will be able to look through the full article by clicking them.
 
-<img src="screenshots/savedArticle.jpeg" width="49%" height="49%" title="Saved Screen">
-<img src="screenshots/readArticleSaved.jpeg" width="49%" height="49%" title="Full Article Viwed From Saved Screen">
+<img src="screenshots/savedArticle.jpeg" width="49%" height="49%" title="Saved Screen"> <img src="screenshots/readArticleSaved.jpeg" width="49%" height="49%" title="Full Article Viwed From Saved Screen">
 
 ---
 
