@@ -12,9 +12,11 @@
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsBreezeApp">
-        <activity android:name=".ui.SaveActivity"></activity>
-        <activity android:name=".ui.ReadActivity" />
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".view.SavedListActivity" />
+        <activity android:name=".view.ReadActivity" />
+        <activity
+            android:name=".view.NewsListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

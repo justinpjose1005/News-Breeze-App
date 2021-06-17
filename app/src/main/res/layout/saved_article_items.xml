@@ -25,50 +25,62 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- title -->
-    <TextView
-        android:id="@+id/titleText"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="30dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/queen_park_bold"
-        android:includeFontPadding="false"
-        android:maxLines="2"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/dateText"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageViewCard"
-        app:layout_constraintTop_toTopOf="@id/imageViewCard" />
+        app:layout_constraintTop_toTopOf="@id/imageViewCard">
 
-    <!-- date -->
-    <TextView
-        android:id="@+id/dateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/source_sans_pro_regular"
-        android:includeFontPadding="false"
-        android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/imageViewCard"
-        app:layout_constraintStart_toStartOf="@id/titleText"
-        app:layout_constraintTop_toBottomOf="@id/titleText" />
+        <!-- title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="30dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/queen_park_bold"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:maxLines="2"
+            android:text="hello i am justin\nsjdpqgyj"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
-    <!-- author -->
-    <TextView
-        android:id="@+id/authorText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/source_sans_pro_regular"
-        android:singleLine="true"
-        android:textColor="@color/light_gray"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/dateText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/dateText" />
+        <!-- date -->
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:includeFontPadding="false"
+            android:text="2010:10:5"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/titleText"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- author -->
+        <TextView
+            android:id="@+id/authorText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/source_sans_pro_regular"
+            android:singleLine="true"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/dateText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintEnd_toEndOf="@id/titleText"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
